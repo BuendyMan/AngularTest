@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<h2>User Details</h2>
+<div>
+  <label>Name: 
+    <input [(ngModel)]="user.name" placeholder="User name">
+  </label>
+</div>
+<div>
+  <label>Password: 
+    <input [(ngModel)]="user.password" placeholder="User pasword" type="password">
+  </label>
+</div>
+<button>
+  <label (click)="onButtonClick()">Verificar</label>
+</button>
+<br>
+<br>
+<app-toast-message *ngIf="showToast" [alertMessage]="errorAlert"></app-toast-message>

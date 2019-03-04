@@ -1,0 +1,14 @@
+<div class="userInformation">
+  <label>Usuario: {{currentUser.name}}</label>
+  <br>
+  <label>Tipo: {{currentUser.type | uppercase}}</label>
+</div>
+
+<h2>Coin List:</h2>
+<ul class="coinList">
+  <li *ngFor="let coin of myCoinList"  
+      [class.selected]="coin === selectedCoin"
+      (click)="onCoinSelect(coin)">
+      <span class="badge">{{coin.name}}</span> {{coin.value}}
+  </li>
+</ul>
